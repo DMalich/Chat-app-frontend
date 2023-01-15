@@ -1,13 +1,13 @@
 import React from "react";
 import { Outlet, Route } from "react-router";
 import { Routes } from "react-router-dom";
-import AuthenticationPage from "./pages/AuthenticationPage";
+import RegisterPage from "./pages/RegisterPage";
 
 function App() {
     return (
         <>
             <Routes>
-                <Route path="/" element={<AuthenticationPage/>}></Route>
+                <Route path="/register" element={<RegisterPage/>}></Route>
                 <Route
                     path="conversations"
                     element={

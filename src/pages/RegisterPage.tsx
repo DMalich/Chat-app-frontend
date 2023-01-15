@@ -1,12 +1,12 @@
 import RegisterForm from "../components/forms/RegisterForm";
 import { Page } from "../utils/styles";
 
-function AuthenticationPage() {
+function RegisterPage() {
     return (
         <Page>
-            <RegisterForm/>
+            <RegisterForm />
         </Page>
-    )
+    );
 }
 
-export default AuthenticationPage;
+export default RegisterPage;

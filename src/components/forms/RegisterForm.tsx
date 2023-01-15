@@ -2,8 +2,12 @@ import { Button, InputContainer, InputField, InputLabel } from "../../utils/styl
 import styles from "./index.module.scss";
 
 function RegisterForm() {
+    const onSubmit = (event: React.FormEvent) => {
+        event.preventDefault();
+    }
+
     return (
-        <form className={styles.form}>
+        <form className={styles.form} onSubmit={onSubmit}>
             <InputContainer>
                 <InputLabel htmlFor="email">Email</InputLabel>
                 <InputField id="email" type="email" />
