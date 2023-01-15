@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+export const Page = styled.div`
+    height: 100%;
+    background: linear-gradient(135deg, black, #0e0642);;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
 export const InputContainer = styled.div`
     background-color: #131313;
     padding: 12px 16px;
@@ -23,8 +31,21 @@ export const InputField = styled.input`
 `;
 
 export const InputLabel = styled.label`
-    display: block;
     color: grey;
+    display: block;
     font-size: 14px;
     margin: 4px 0;
 `;
+
+export const Button = styled.button`
+    width: 100%;
+    color: white;
+    background-color: #2408db;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    font-family: 'Inter';
+    border-radius: 8px;
+    padding: 25px 0 ;
+`;
+

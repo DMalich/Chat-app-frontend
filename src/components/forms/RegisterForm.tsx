@@ -1,4 +1,4 @@
-import { InputContainer, InputField, InputLabel } from "../../utils/styles";
+import { Button, InputContainer, InputField, InputLabel } from "../../utils/styles";
 import styles from "./index.module.scss";
 
 function RegisterForm() {
@@ -22,6 +22,7 @@ function RegisterForm() {
                 <InputLabel htmlFor="password">Password</InputLabel>
                 <InputField id="password" type="password" />
             </InputContainer>
+            <Button className={styles.button}>Create Account</Button>
         </form>
     );
 }

@@ -1,10 +1,11 @@
 import RegisterForm from "../components/forms/RegisterForm";
+import { Page } from "../utils/styles";
 
 function AuthenticationPage() {
     return (
-        <div>
+        <Page>
             <RegisterForm/>
-        </div>
+        </Page>
     )
 }
 

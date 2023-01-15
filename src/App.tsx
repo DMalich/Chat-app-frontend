@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet, Route } from "react-router";
 import { Routes } from "react-router-dom";
-import AuthenticationPage from "./pages/AutheticationPage";
+import AuthenticationPage from "./pages/AuthenticationPage";
 
 function App() {
     return (
