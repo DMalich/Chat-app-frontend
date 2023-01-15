@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
     Button,
     InputContainer,
@@ -32,6 +33,9 @@ function RegisterForm() {
                 <InputField id="password" type="password" />
             </InputContainer>
             <Button className={styles.button}>Create Account</Button>
+            <div className={styles.existingUserContainer}>
+                <Link to='/login' className={styles.existingUser}>Already have an account?</Link>
+            </div>
         </form>
     );
 }

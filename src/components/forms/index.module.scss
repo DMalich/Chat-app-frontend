@@ -13,3 +13,17 @@ form {
 .button {
     margin: 8px 0;
 }
+
+.existingUser, .existingUser:visited, .existingUser:hover, .existingUser:active {
+    text-decoration: none;
+    color: grey;
+}
+
+.existingUserContainer {
+    display: flex;
+    justify-content: end;
+}
+
+.loginFormPassword {
+    margin: 8px 0;
+}

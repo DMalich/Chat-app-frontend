@@ -48,7 +48,6 @@ export const Button = styled.button`
     font-family: "Poppins";
     padding: 25px 0;
     font-weight: 500;
-    box-sizing: border-box;
     transition: 400ms background-color ease-in;
     &:hover {
         cursor: pointer;
