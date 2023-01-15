@@ -1,10 +1,15 @@
-import { Button, InputContainer, InputField, InputLabel } from "../../utils/styles";
+import {
+    Button,
+    InputContainer,
+    InputField,
+    InputLabel,
+} from "../../utils/styles";
 import styles from "./index.module.scss";
 
 function RegisterForm() {
     const onSubmit = (event: React.FormEvent) => {
         event.preventDefault();
-    }
+    };
 
     return (
         <form className={styles.form} onSubmit={onSubmit}>

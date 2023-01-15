@@ -45,7 +45,7 @@ export const Button = styled.button`
     border: none;
     font-size: 16px;
     border-radius: 8px;
-    font-family: 'Poppins';
+    font-family: "Poppins";
     padding: 25px 0;
     font-weight: 500;
     box-sizing: border-box;
