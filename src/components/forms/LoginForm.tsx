@@ -5,7 +5,7 @@ import {
     InputLabel,
 } from "../../utils/styles";
 import { Link } from "react-router-dom";
-import { useForm } from "react-hook-form/dist/useForm";
+import { useForm } from "react-hook-form";
 import styles from "./index.module.scss";
 
 function LoginForm() {
