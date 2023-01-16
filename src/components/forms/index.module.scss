@@ -14,12 +14,21 @@ form {
     margin: 8px 0;
 }
 
-.existingUser, .existingUser:visited, .existingUser:hover, .existingUser:active {
+.existingUser,
+.existingUser:visited,
+.existingUser:hover,
+.existingUser:active,
+.nonExistingUser,
+.nonExistingUser:visited,
+.nonExistingUser:hover,
+.nonExistingUser:active {
     text-decoration: none;
     color: grey;
+    margin: 10px 0;
 }
 
-.existingUserContainer {
+.existingUserContainer,
+.nonExistingUserContainer {
     display: flex;
     justify-content: end;
 }

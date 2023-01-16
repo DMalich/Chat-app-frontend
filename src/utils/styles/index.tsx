@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Page = styled.div`
     height: 100%;
-    background: linear-gradient(135deg, black, #0e0642);
+    background: linear-gradient(135deg, black, #09042b);
     display: flex;
     justify-content: center;
     align-items: center;

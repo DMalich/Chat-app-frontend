@@ -4,10 +4,11 @@ import {
     InputField,
     InputLabel,
 } from "../../utils/styles";
+import { Link } from "react-router-dom";
 import styles from "./index.module.scss";
 
 function LoginForm() {
-    const onSubmit = (event: React.FormEvent) => {
+    const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
     };
 
@@ -22,6 +23,11 @@ function LoginForm() {
                 <InputField id="password" type="password" />
             </InputContainer>
             <Button className={styles.button}>Login</Button>
+            <div className={styles.nonExistingUserContainer}>
+                <Link to="/register" className={styles.nonExistingUser}>
+                    Create an account?
+                </Link>
+            </div>
         </form>
     );
 }

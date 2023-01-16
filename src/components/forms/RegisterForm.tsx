@@ -8,7 +8,7 @@ import {
 import styles from "./index.module.scss";
 
 function RegisterForm() {
-    const onSubmit = (event: React.FormEvent) => {
+    const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
     };
 
@@ -34,7 +34,9 @@ function RegisterForm() {
             </InputContainer>
             <Button className={styles.button}>Create Account</Button>
             <div className={styles.existingUserContainer}>
-                <Link to='/login' className={styles.existingUser}>Already have an account?</Link>
+                <Link to="/login" className={styles.existingUser}>
+                    Already have an account?
+                </Link>
             </div>
         </form>
     );
