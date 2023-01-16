@@ -3,7 +3,7 @@ import { Page } from "../utils/styles";
 
 function LoginPage() {
     return (
-        <Page>
+        <Page display="flex" justifyContent="center" alignItems="center">
             <LoginForm />
         </Page>
     );

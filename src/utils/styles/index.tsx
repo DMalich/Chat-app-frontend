@@ -1,11 +1,12 @@
 import styled from "styled-components";
+import { PageProps } from "./styleTypes";
 
-export const Page = styled.div`
+export const Page = styled.div<PageProps>`
     height: 100%;
     background: linear-gradient(135deg, black, #09042b);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: ${(props) => props.display};
+    justify-content: ${(props) => props.justifyContent};
+    align-items: ${(props) => props.alignItems};
 `;
 
 export const InputContainer = styled.div`
@@ -59,4 +60,20 @@ export const Button = styled.button`
     &:focus {
         background-color: #1e07b1;
     }
+`;
+
+export const ConversationsSidebarStyle = styled.aside`
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 400px;
+    color: white;
+    background-color: #131313;
+`;
+
+export const ConversationsChannelPageStyle = styled.div`
+    margin-left: 400px;
+    height: 100px;
+    color: white;
 `;
