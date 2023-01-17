@@ -10,9 +10,9 @@ function App() {
     return (
         <>
             <Routes>
-                <Route path="/register" element={<RegisterPage />}></Route>
-                <Route path="/login" element={<LoginPage />}></Route>
-                <Route path="/conversations" element={<ConversationsPage />}>
+                <Route path="register" element={<RegisterPage />}></Route>
+                <Route path="login" element={<LoginPage />}></Route>
+                <Route path="conversations" element={<ConversationsPage />}>
                     <Route path=":id" element={<ConversationsChannelPage />} />
                 </Route>
             </Routes>

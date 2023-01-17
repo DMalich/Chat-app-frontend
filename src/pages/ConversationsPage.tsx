@@ -5,13 +5,13 @@ import ConversationsSidebar from "../components/conversations/ConversationsSideb
 import { Page } from "../utils/styles";
 
 function ConversationsPage() {
-    console.log(useParams());
+    const { id } = useParams();
 
     return (
         <Page>
             <ConversationsSidebar />
-            <ConversationsPanel />
-            <Outlet />
+            {id && <ConversationsPanel />}
+            {/* <Outlet /> */}
         </Page>
     );
 }
