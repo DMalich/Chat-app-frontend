@@ -12,7 +12,7 @@ function ConversationsPage() {
         <Page>
             <ConversationsSidebar conversations={mockConversations}/>
             {id && <ConversationsPanel />}
-            {/* <Outlet /> */}
+            <Outlet />
         </Page>
     );
 }

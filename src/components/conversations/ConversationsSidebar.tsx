@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { useNavigate } from "react-router-dom";
 import {
     ConversationsSidebarStyle,
     ConversationsSidebarContainer,
@@ -14,6 +15,8 @@ type Props = {
 };
 
 const ConversationsSidebar: FC<Props> = ({ conversations }) => {
+    const navigate = useNavigate();
+
     return (
         <ConversationsSidebarStyle>
             <ConversationsSidebarHeader>
@@ -22,7 +25,7 @@ const ConversationsSidebar: FC<Props> = ({ conversations }) => {
             </ConversationsSidebarHeader>
             <ConversationsSidebarContainer>
                 {conversations.map((conversation) => (
-                    <ConversationsSidebarItem>
+                    <ConversationsSidebarItem onClick={() => {navigate(`/conversations/${conversation.id}`)}}>
                         <div className={styles.userAvatar}></div>
                         <div>
                             <span className={styles.userName}>{conversation.name}</span>
