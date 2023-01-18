@@ -1,0 +1,17 @@
+.userName {
+    display: block;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.userAvatar {
+    background-color: rgb(255, 178, 35);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.conversationLastMessage {
+    font-size: 14px;
+    color: rgb(174, 174, 174);
+}

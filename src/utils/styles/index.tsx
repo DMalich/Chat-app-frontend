@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import { PageProps } from "./styleTypes";
 
-export const SIDEBAR_WIDTH = 380;
+export const SIDEBAR_WIDTH = 350;
 
 export const Page = styled.div<PageProps>`
     height: 100%;
-    background: linear-gradient(135deg, black, #09042b);
+    width: 100%;
+    /* background: linear-gradient(135deg, black, #09042b); */
+    background: transparent;
     display: ${(props) => props.display};
     justify-content: ${(props) => props.justifyContent};
     align-items: ${(props) => props.alignItems};
@@ -73,19 +75,29 @@ export const ConversationsSidebarStyle = styled.aside`
     color: white;
     background-color: #131313;
     border-right: 1px solid #5454543d;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+`;
 
-    & header {
-        /* background-color: #151515; */
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 24px;
-        background-color: #0e0d0d;
-        height: 65px;
-        border-bottom: 1px solid #5454543d;
-        & h1 {
-            font-weight: 400;
-        }
+export const ConversationSidebarHeader = styled.header`
+    /* background-color: #151515; */
+    position: fixed;
+    width: ${SIDEBAR_WIDTH}px;
+    height: 100px;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    background-color: #0e0d0d;
+    height: 65px;
+    /* border-bottom: 1px solid #5454543d; */
+    box-sizing: border-box;
+    & h1 {
+        font-weight: 400;
     }
 `;
 
@@ -93,4 +105,16 @@ export const ConversationsChannelPageStyle = styled.div`
     margin-left: ${SIDEBAR_WIDTH}px;
     height: 100px;
     color: white;
+`;
+
+export const ConversationSidebarContainer = styled.div``;
+
+export const ConversationSidebarItem = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 14px 30px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ffffff35;
+    background-color: #101010;
 `;
