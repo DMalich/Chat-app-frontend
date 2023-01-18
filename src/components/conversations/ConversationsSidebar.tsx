@@ -1,9 +1,9 @@
 import { FC } from "react";
 import {
     ConversationsSidebarStyle,
-    ConversationSidebarContainer,
-    ConversationSidebarHeader,
-    ConversationSidebarItem,
+    ConversationsSidebarContainer,
+    ConversationsSidebarHeader,
+    ConversationsSidebarItem,
 } from "../../utils/styles";
 import { MdEditNote } from "react-icons/md";
 import { ConversationType } from "../../utils/types";
@@ -16,21 +16,21 @@ type Props = {
 const ConversationsSidebar: FC<Props> = ({ conversations }) => {
     return (
         <ConversationsSidebarStyle>
-            <ConversationSidebarHeader>
+            <ConversationsSidebarHeader>
                 <h1>Conversations</h1>
                 <MdEditNote size={30} />
-            </ConversationSidebarHeader>
-            <ConversationSidebarContainer>
+            </ConversationsSidebarHeader>
+            <ConversationsSidebarContainer>
                 {conversations.map((conversation) => (
-                    <ConversationSidebarItem>
+                    <ConversationsSidebarItem>
                         <div className={styles.userAvatar}></div>
                         <div>
                             <span className={styles.userName}>{conversation.name}</span>
                             <span className={styles.conversationLastMessage}>{conversation.lastMessage}</span>
                         </div>
-                    </ConversationSidebarItem>
+                    </ConversationsSidebarItem>
                 ))}
-            </ConversationSidebarContainer>
+            </ConversationsSidebarContainer>
         </ConversationsSidebarStyle>
     );
 };

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { PageProps } from "./styleTypes";
 
 export const SIDEBAR_WIDTH = 350;
+export const SIDEBAR_HEADER_HEIGHT = 80;
 
 export const Page = styled.div<PageProps>`
     height: 100%;
@@ -77,15 +78,20 @@ export const ConversationsSidebarStyle = styled.aside`
     border-right: 1px solid #5454543d;
     overflow-y: scroll;
     &::-webkit-scrollbar {
-        display: none;
+        /* display: none; */
+        width: 8px;
+        height: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #808080d6;
     }
 `;
 
-export const ConversationSidebarHeader = styled.header`
+export const ConversationsSidebarHeader = styled.header`
     /* background-color: #151515; */
     position: fixed;
     width: ${SIDEBAR_WIDTH}px;
-    height: 100px;
+    height: ${SIDEBAR_HEADER_HEIGHT}px;
     top: 0;
     left: 0;
     display: flex;
@@ -93,7 +99,6 @@ export const ConversationSidebarHeader = styled.header`
     align-items: center;
     padding: 0 30px;
     background-color: #0e0d0d;
-    height: 65px;
     /* border-bottom: 1px solid #5454543d; */
     box-sizing: border-box;
     & h1 {
@@ -107,9 +112,11 @@ export const ConversationsChannelPageStyle = styled.div`
     color: white;
 `;
 
-export const ConversationSidebarContainer = styled.div``;
+export const ConversationsSidebarContainer = styled.div`
+    margin-top: ${SIDEBAR_HEADER_HEIGHT}px;
+`;
 
-export const ConversationSidebarItem = styled.div`
+export const ConversationsSidebarItem = styled.div`
     display: flex;
     align-items: center;
     gap: 30px;
