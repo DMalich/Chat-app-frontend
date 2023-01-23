@@ -1,11 +1,13 @@
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { postRegisterUser } from "../../utils/api";
 import {
     Button,
     InputContainer,
     InputField,
     InputLabel,
 } from "../../utils/styles";
+import { CreateUserParams } from "../../utils/types";
 import styles from "./index.module.scss";
 
 function RegisterForm() {
@@ -13,10 +15,15 @@ function RegisterForm() {
         register,
         handleSubmit,
         formState: { errors },
-    } = useForm();
+    } = useForm<CreateUserParams>();
 
-    const onSubmit = (data: any) => {
+    const onSubmit = async (data: CreateUserParams) => {
         console.log(data);
+        try {
+            await postRegisterUser(data);
+        } catch (err) {
+            console.log(err);
+        }
     };
 
     return (
