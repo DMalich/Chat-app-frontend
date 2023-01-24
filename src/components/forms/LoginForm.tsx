@@ -4,8 +4,10 @@ import {
     InputField,
     InputLabel,
 } from "../../utils/styles";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { UserCredentialsParams } from "../../utils/types";
+import { postLoginUser } from "../../utils/api";
 import styles from "./index.module.scss";
 
 function LoginForm() {
@@ -13,10 +15,17 @@ function LoginForm() {
         register,
         handleSubmit,
         formState: { errors },
-    } = useForm();
+    } = useForm<UserCredentialsParams>();
 
-    const onSubmit = (data: any) => {
-        console.log(data);
+    const navigate = useNavigate();
+
+    const onSubmit = async (data: UserCredentialsParams) => {
+        try {
+            await postLoginUser(data);
+            navigate("/conversations");
+        } catch (err) {
+            console.log(err);
+        }
     };
 
     return (
@@ -26,7 +35,7 @@ function LoginForm() {
                 <InputField
                     id="email"
                     type="email"
-                    {...(register("email"), { required: true })}
+                    {...register("email", { required: true })}
                 />
             </InputContainer>
             <InputContainer className={styles.loginFormPassword}>
@@ -34,7 +43,7 @@ function LoginForm() {
                 <InputField
                     id="password"
                     type="password"
-                    {...(register("password"), { required: true })}
+                    {...register("password", { required: true })}
                 />
             </InputContainer>
             <Button className={styles.button}>Login</Button>

@@ -18,7 +18,6 @@ function RegisterForm() {
     } = useForm<CreateUserParams>();
 
     const onSubmit = async (data: CreateUserParams) => {
-        console.log(data);
         try {
             await postRegisterUser(data);
         } catch (err) {

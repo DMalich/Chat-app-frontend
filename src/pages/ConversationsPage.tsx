@@ -11,7 +11,7 @@ function ConversationsPage() {
     return (
         <Page>
             <ConversationsSidebar conversations={mockConversations}/>
-            {id && <ConversationsPanel />}
+            {!id && <ConversationsPanel />}
             <Outlet />
         </Page>
     );
