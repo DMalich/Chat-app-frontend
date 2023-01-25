@@ -1,6 +1,6 @@
 import { ModalOverlayStyle } from "../../utils/styles";
 import CreateConversationForm from "../forms/CreateConversationForm";
-import { ModalContainer, ModalHeader } from "./index";
+import { ModalContainer, ModalHeader, ModalContentBody } from "./index";
 
 function CreateConversationModal() {
     return (
@@ -9,7 +9,9 @@ function CreateConversationModal() {
                 <ModalHeader>
                     <h2>Create a conversation</h2>
                 </ModalHeader>
-                <CreateConversationForm />
+                <ModalContentBody>
+                    <CreateConversationForm />
+                </ModalContentBody>
             </ModalContainer>
         </ModalOverlayStyle>
     );

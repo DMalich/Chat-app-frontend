@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { PageProps } from "./styleTypes";
+import { InputContainerProps, PageProps } from "./styleTypes";
 
 export const SIDEBAR_WIDTH = 350;
 export const SIDEBAR_HEADER_HEIGHT = 80;
@@ -14,8 +14,8 @@ export const Page = styled.div<PageProps>`
     align-items: ${(props) => props.alignItems};
 `;
 
-export const InputContainer = styled.div`
-    background-color: #131313;
+export const InputContainer = styled.div<InputContainerProps>`
+    background-color: ${(prop) => prop.backgroundColor || "#131313"};
     padding: 12px 16px;
     border-radius: 10px;
     width: 100%;
@@ -129,7 +129,7 @@ export const ConversationsSidebarItem = styled.div`
 export const ModalOverlayStyle = styled.div`
     height: 100%;
     width: 100%;
-    background-color: #000000c3;
+    background-color: #000000a0;
     position: fixed;
     display: flex;
     justify-content: center;
@@ -142,9 +142,19 @@ export const ModalContainerStyle = styled.div`
     background-color: #121212;
     width: 650px;
     box-sizing: border-box;
+    border-radius: 10px;
 `;
 
 export const ModalHeaderStyle = styled.header`
     width: 100%;
+    padding: 0 24px;
+    & h2 {
+        font-weight: 500;
+        margin: 0;
+        margin-top: 24px;
+    }
+`;
 
+export const ModalContentBodyStyle = styled.div`
+    padding: 24px;
 `;
