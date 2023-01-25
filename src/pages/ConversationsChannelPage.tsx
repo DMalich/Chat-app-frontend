@@ -1,12 +1,13 @@
 import { ConversationsChannelPageStyle } from "../utils/styles";
-import { useParams } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../utils/context/AuthContext";
 
 function ConversationsChannelPage() {
-    console.log(useParams());
+    const { user } = useContext(AuthContext);
 
     return (
         <ConversationsChannelPageStyle>
-            Channel page
+            {user && user.email}
         </ConversationsChannelPageStyle>
     );
 }
