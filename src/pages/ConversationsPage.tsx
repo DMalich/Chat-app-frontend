@@ -10,7 +10,7 @@ function ConversationsPage() {
 
     return (
         <Page>
-            <ConversationsSidebar conversations={mockConversations}/>
+            <ConversationsSidebar conversations={[]}/>
             {!id && <ConversationsPanel />}
             <Outlet />
         </Page>

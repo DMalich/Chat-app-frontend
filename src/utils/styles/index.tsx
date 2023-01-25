@@ -125,3 +125,26 @@ export const ConversationsSidebarItem = styled.div`
     border-bottom: 1px solid #ffffff35;
     background-color: #101010;
 `;
+
+export const ModalOverlayStyle = styled.div`
+    height: 100%;
+    width: 100%;
+    background-color: #000000c3;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    color: white;
+`;
+
+export const ModalContainerStyle = styled.div`
+    background-color: #121212;
+    width: 650px;
+    box-sizing: border-box;
+`;
+
+export const ModalHeaderStyle = styled.header`
+    width: 100%;
+
+`;
