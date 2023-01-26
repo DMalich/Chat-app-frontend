@@ -140,7 +140,7 @@ export const ModalOverlayStyle = styled.div`
 
 export const ModalContainerStyle = styled.div`
     background-color: #121212;
-    width: 650px;
+    width: 600px;
     box-sizing: border-box;
     border-radius: 10px;
 `;
@@ -148,13 +148,35 @@ export const ModalContainerStyle = styled.div`
 export const ModalHeaderStyle = styled.header`
     width: 100%;
     padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: 24px;
     & h2 {
         font-weight: 500;
         margin: 0;
-        margin-top: 24px;
     }
 `;
 
 export const ModalContentBodyStyle = styled.div`
     padding: 24px;
+`;
+
+export const TextField = styled.textarea`
+    font-family: "Inter";
+    background-color: inherit;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: inherit;
+    font-size: 18px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 4px 0;
+    resize: none;
+    ::-webkit-scrollbar {
+        display: none;
+    }
 `;

@@ -21,11 +21,11 @@ const ConversationsSidebar: FC<Props> = ({ conversations }) => {
 
     return (
         <>
-            {showModal && <CreateConversationModal></CreateConversationModal>}
+            {showModal && <CreateConversationModal setShowModal={setShowModal}/>}
             <ConversationsSidebarStyle>
                 <ConversationsSidebarHeader>
                     <h1>Conversations</h1>
-                    <div onClick={() => setShowModal(!showModal)}>
+                    <div onClick={() => setShowModal(!showModal)} className={styles.newConversationButton}>
                         <MdEditNote size={30} />
                     </div>
                 </ConversationsSidebarHeader>
